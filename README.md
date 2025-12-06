@@ -97,10 +97,10 @@ streamlit run ui/app.py
 **Hardware:** NVIDIA RTX 3050 (4GB VRAM)
 **Inference Time:** ~12-14 seconds per image (512x512, 40 steps)
 
-| Asset Type | Output Sample | Log Data |
-| :--- | :--- | :--- |
-| **Magma Golem** | ![Golem](assets/golem.png) | Seed: `3993855977`<br>Step: 40<br>VRAM: 1.75GB |
-| **Crystal Potion** | ![Potion](assets/potion.png) | Seed: `1708371718`<br>Step: 40<br>VRAM: 1.75GB |
+| Asset Type | Output Sample | Log Data | Raw Prompt (LLM Off) |
+| :--- | :--- | :--- | :--- |
+| **Magma Golem** | ![Golem](assets/golem.png) | Seed: `3993855977`<br>Step: 40<br>VRAM: 1.75GB | `a tiny cute magma golem, made of dripping lava and obsidian rocks, glowing core, bright orange and black, angry expression, isometric view, 3d render, blender style, volumetric lighting, high contrast, masterpiece` |
+| **Crystal Potion** | ![Potion](assets/potion.png) | Seed: `1708371718`<br>Step: 40<br>VRAM: 1.75GB | `an isometric magic potion bottle, ornate golden stopper, swirling galaxy liquid inside with glitter stars, thick ancient glass texture, caustics lighting, magical aura, dark tabletop background, crisp details, 3d render` |
 
 ---
 
