@@ -16,7 +16,7 @@
 
 **A local, privacy-focused tool for prototyping game assets on consumer hardware.**
 
-![Main Screenshot](https://via.placeholder.com/800x400?text=Insert+Screenshot+Here)
+![Main Screenshot](assets/screenshot.jpeg)
 
 ## ❓ Why did I build this?
 
@@ -99,8 +99,8 @@ streamlit run ui/app.py
 
 | Asset Type | Output Sample | Log Data |
 | :--- | :--- | :--- |
-| **Magma Golem** | ![Golem](https://via.placeholder.com/150?text=Golem+Img) | Seed: `3993855977`<br>Step: 40<br>VRAM: 1.75GB |
-| **Crystal Potion** | ![Potion](https://via.placeholder.com/150?text=Potion+Img) | Seed: `1708371718`<br>Step: 40<br>VRAM: 1.75GB |
+| **Magma Golem** | ![Golem](assets/golem.png) | Seed: `3993855977`<br>Step: 40<br>VRAM: 1.75GB |
+| **Crystal Potion** | ![Potion](assets/potion.png) | Seed: `1708371718`<br>Step: 40<br>VRAM: 1.75GB |
 
 ---
 
