@@ -4,12 +4,6 @@
 # ⚒️ Local GenAI Forge
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-red) ![Diffusers](https://img.shields.io/badge/HuggingFace-Diffusers-yellow) ![Hardware](https://img.shields.io/badge/Hardware-Consumer_GPU-green)
-
-**A privacy-first, optimized Generative AI pipeline designed to prototype game assets on consumer-grade hardware.**
-
-![Main UI Screenshot](https://via.placeholder.com/800x400?text=Insert+Main+Dashboard+Screenshot+Here)
-*(Screenshot: Real-time generation dashboard running on RTX 3050)*
-
 ---
 
 # ⚒️ Local GenAI Forge
