@@ -1,0 +1,46 @@
+# Pipeline Configuration & Hyperparameters
+# This file serves as the Single Source of Truth (SSOT) for both the training and inference modules.
+
+# Internal codename for the asset generation pipeline.
+project_name: "local-genai-forge"
+
+model:
+  # I chose DreamShaper v8 over the base Stable Diffusion v1.5.
+  # Reason: It has significantly better priors for 2.5D/3D art styles, 
+  # reducing the amount of fine-tuning required for game assets.
+  base_model: "Lykon/dreamshaper-8" 
+  output_dir: "lora_training/output/match_villains_lora"
+
+training:
+  # --- HARDWARE CONSTRAINTS (RTX 3050 - 4GB VRAM) ---
+  
+  # Keeping resolution at 512x512. 
+  # Upscaling can happen in post-processing; training at 768+ causes OOM on this card.
+  resolution: 512
+  
+  # Strict limit. Batch size > 1 crashes the GPU memory buffer immediately.
+  train_batch_size: 1
+  
+  # Since physical batch size is constrained to 1, I use gradient accumulation.
+  # Accumulating 4 steps simulates a batch size of 4, stabilizing the loss convergence.
+  gradient_accumulation_steps: 4
+  
+  # Mandatory for consumer GPUs. Cuts VRAM usage in half compared to FP32.
+  mixed_precision: "fp16"
+  
+  # The MVP setting: xFormers library allows us to trade a tiny bit of compute for massive memory savings.
+  # Without this, training on 4GB VRAM is mathematically impossible.
+  enable_xformers_memory_efficient_attention: true
+  
+  # 1000 steps is usually the sweet spot for style transfer on small datasets (10-20 images).
+  # Going higher often leads to overfitting (burning) the style.
+  max_train_steps: 1000
+  
+  learning_rate: 1e-4
+  lr_scheduler: "constant"
+
+inference:
+  # Default runtime settings for the dashboard.
+  # Users can override these via the Streamlit UI.
+  num_images: 1
+  guidance_scale: 7.5

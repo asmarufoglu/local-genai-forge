@@ -1,0 +1,32 @@
+# Python & OS
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables (Secrets)
+.env
+
+# IDE Settings
+.vscode/
+.idea/
+
+# Output Files (Don't upload generated images/zips)
+*.png
+*.zip
+*.txt
+
+# Model Weights & Heavy Files
+*.safetensors
+*.ckpt
+*.bin
+lora_training/output/
+
+# Data
+data/raw/
+data/processed/
